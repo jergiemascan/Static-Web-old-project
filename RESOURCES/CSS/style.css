@@ -1,0 +1,731 @@
+/*-----------------------------*/
+/*        COLOR             */
+/*-----------------------------*/
+ /*   #e67e22
+
+/*-----------------------------*/
+/*      BASIC SET UP            */
+/*-----------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #ffff;
+    color: #535252; /* text color*/
+    font-family: 'Lato','Arial',sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden; /*to hide the overflow on the web sides*/
+}
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+ 
+}
+
+
+
+/*-----------------------------*/
+/*  REUSABLE COMPONENTS        */
+/*-----------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto; /*top and right*/
+   
+   
+}
+section {
+    padding:80px 0;/* 80px top and buttom, 0 left and right*/
+    
+}
+.box{
+    padding: 1%;
+    text-align: justify;/*ganid sa gilid2 sa texts murag box*/
+}
+.box p { /*all the text inside box paragraph is affected*/
+
+    font-size: 80%;
+    line-height: 120%;
+    
+    
+}
+
+/*-----------------------------*/
+/*      HEADINGS               */
+/*-----------------------------*/
+
+h1, h2, h3 {
+   
+    font-weight: 300;/*decreased font,dili silaw*/
+    text-transform: uppercase;/*change the font bigger*/
+    letter-spacing: 1px; /*not so tight/compressed*/
+
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 200%;/*html has font size of 20px*/
+    word-spacing: 4px; /*dili dikit2 after words*/
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing:  2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h4,h5 {display: none;}
+
+h2:after {      /*pseudo, line under GET FOOD FAST- */
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    margin: 0 auto;
+    margin-top: 20px;
+     
+    
+}
+h3 {
+    font-size: 100%;
+    margin-bottom: 8%;
+    
+}
+/*-----------------------------*/
+/*    MEALS
+/*-----------------------------*/
+.section-meals {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.meals-showcase{
+    width: 100%;
+    list-style: none;
+    
+}
+
+.meals-showcase li {
+    display:block;
+    float: left;
+    width: 25%; 
+}
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+     background-color: #000; /*bg color of the photos */
+   
+}
+.meal-photo img {
+    opacity: 0.7; /*transparency of bg color from the meal-photo*/
+    width: 100%;
+    height: auto;
+    -webkit-transform:scale(1.15);
+    transform:scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; /*change ang color */
+    
+}
+.meal-photo img:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03); /*mogamay pag naa ang curser sa pict (hover)*/
+     opacity: 1;
+}
+
+
+/*-----------------------------*/
+/*    PARAGRAPHS
+/*-----------------------------*/
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+/*-----------------------------*/
+        /*FEATURES
+/*-----------------------------*/
+
+.section-features .long-copy{
+    margin-bottom: 20px;
+    
+}
+/*-----------------------------*/
+ /*  LINKS
+/*-----------------------------*/
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    -webkit-transition: border-bottom 0.2s,color 0.2s;
+    transition: border-bottom 0.2s,color 0.2s;
+ 
+}
+a:hover,
+a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/*-----------------------------*/
+ /*   ICONS
+/*-----------------------------*/
+
+.icon-big {
+    font-size: 320%;
+    display:block;/* it forces inline block*/
+    color:#e67e22;
+    margin-bottom: 5px;
+    padding-left: 30%;
+
+}
+.icon-small{
+   
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 90%;
+    padding-right: 10px;
+    /*to align texts and icons*/
+    line-height: 100%;
+    vertical-align: middle;
+    margin-top: -5px
+    
+}
+/*-----------------------------*/
+/*     BUTTONS                 */
+/*-----------------------------*/
+
+/*.btn {
+    display: inline-block;
+    padding: 10px,30px;
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 200px;
+    this was before link- and btn visited code,the same with. btn full,btn ghost.   
+}*/
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px,30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transform:  background-color 0,2s, border 0,2s, color 0.2s; 
+    transform: background-color 0,2s, border 0,2s, color 0.2s; 
+}
+   
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color:#e67e22;
+    border: 1px solid #e67e22;
+    padding: 7px 5px;
+    color:#fff; /*text color*/
+    margin-right: 15px;
+
+   
+}
+     
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22; /*round line around letters*/
+    padding: 7px 5px;
+    color:#e67e22;/*text color*/
+}
+
+.btn:hover, /*when curser is on the button*/
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active
+ {
+    background-color: #cf6d17;/*when putting the curser on the button this color will appear*/
+    
+}
+
+/* button: not to hide the text when putting curser on the button*/
+
+.btn-full:hover,
+.btn-full:active 
+{
+    border: 1px solid #e67e22;
+    padding: 7px  5px;
+    
+}
+     
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #e67e22; /*round line around letters*/
+    padding: 7px 5px;
+    color:#fff;/*text color when putting curser on button(active)*/
+}
+
+
+/*-----------------------------*/
+/*        HEADER               */
+/*-----------------------------*/
+
+header {
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.75)),to(rgba(0, 0, 0, 0.75))),url(img/hero-min.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url('img/hero-min.jpg');/*to make the pict darker to see the text*/
+    background-size: cover; /* to see all backgrnd img*/
+    background-position: center;
+    height: 100vh; /*100% of the viewhorts,whole page with img */
+     background-attachment: fixed;/*bg photo sa website pilit lang sya pagmag scroll pababa or pataas ang website*/
+    
+}
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*Translate half of its width,height into the left*/
+}
+
+
+.logo, .logo-black {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black {display:none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px} /*the logo black hides normal state*/
+
+/* main nav*/
+.main-nav {
+    float: right;
+    list-style: none; /*removing the bullets dots*/
+    margin-top: 30px;
+}
+
+.main-nav li { /*main navig. and all li elements inside*/
+    display: inline-block; /*so it can be side by side-linya - - - */
+    margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited { /* li elements and a elements inside */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 70%; /*in html based fonts is 20px so we want it to be 15px 15/20=0.75 -> 75%*/
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+     padding: 5px 0;
+   
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+border-bottom: 2px solid #e67e22;
+    
+}
+/*MOBILE NAVI*/
+.mobile-nav-icon{
+    float: right;
+    margin-top:30px;
+    cursor: pointer;
+    display: none;
+}
+.mobile-nav-icon i{
+    color: #fff;
+}
+
+
+/*Sticky navi*/
+
+.sticky {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 2px #bcbcbc;
+    z-index: 999; /*mulutaw sya kay pinaka dakong value sa tanan elements, it finds the vertical stacking of elements.*/
+    
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: #555;
+     padding: 15px 0; 
+   
+    
+}
+
+.sticky .logo {display: none;} /*normal logo hides in sticky läge*/
+.sticky .logo-black {display: block;}/*logo black is dispayed*/
+
+.sticky .main-nav{margin-top: 16px;}
+
+
+
+/*-----------------------------*/
+        /*HOW THIS WORKS STEPS
+/*-----------------------------*/
+.section-steps{
+  
+    background-color: #f4f4f4; 
+    margin-top: 0;
+    padding-bottom: 0;
+  
+}
+
+.step-box:first-child {
+    text-align: right;
+    padding-right: 2%;
+     margin-top: 50px;
+   
+   
+}
+.step-box:last-child {
+     padding-left: 3%;
+    margin-top: 40px;
+    
+}
+
+.app-screen {
+    width: 30%; /* %tage because of responsive website we strive*/
+   
+}
+.work-steps{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.work-steps:last-of-type{ /*last rad of texts is adjusten to 70px*/
+    margin-bottom: 70px;
+}
+.work-steps div {
+    border: 2px solid #e67e22;
+    color: #e67e22;
+    display:inline-block;
+    border-radius:50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 20px;
+}
+
+.btn-app img {
+    height: 40px;
+    width: auto;
+    margin-right: 40px;
+  
+}
+.btn-app:link, /*under apple and android app*/
+.btn-app:visited{
+    border: 0;
+}
+
+/*-----------------------------*/
+/*     CITIES               */
+/*-----------------------------*/
+
+.box2 img {
+
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+.box2{
+    width: 20%;
+     padding: 1%;
+    text-align: justify;
+    font-weight: 300%;
+    line-height: 100%;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.section-cities .box2{
+    width: 20%;
+    margin-left: 3%;
+ 
+}
+.section-cities img {
+   margin-left: 3%;
+ 
+}
+
+
+.city-feature {
+    margin-bottom: 5px;
+
+}
+/*-----------------------------*/
+/*     TESTIMONIALS               */
+/*-----------------------------*/
+
+.section-testimonials {
+    background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))),url(img/back-customers-min.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(img/back-customers-min.jpg);
+    background: cover;
+    color: #fff;
+    background-attachment: fixed; /*the image are in the same position. itn the same position*/
+}
+blockquote{
+    font-style: italic;
+    padding: 2%;
+    line-height: 150%;/*para ang content naa sa sulod sa box na dli makita na box.Boxed ang content*/
+    line-height: 150%;
+    margin-right: 15%;
+    position: relative;/*so that position absolute quoation shows*/
+    margin-top: 40px;
+}
+blockquote:before {
+    content: " \201C ";/*to add special characters like quotation, check glyphs css-tricks and copy*/
+    font-size: 400%;
+    display: block;
+    position:absolute;/*so that the quotation shows above so the parent element must be position:relative */
+    top: -5px;
+    left: -5px;
+    
+    
+}
+cite{
+    display: block;
+    margin-top: 20px;
+    font-size: 90%;
+    
+}
+
+cite img {
+    border-radius: 50%;
+    height: 40%;
+    margin-right: 15px;
+    vertical-align: middle;/*ang img ug name naa sa tunga sa right side sa img.*/
+}
+
+/*-----------------------------*/
+/*     PLAN-PRICE             */
+/*-----------------------------*/
+.section-pricing {
+    background-color: #f4f4f4; 
+
+  
+}
+.plan-box { 
+    background-color:#fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    -webkit-box-shadow: 0 2px 5px #e67e22;
+    box-shadow: 0 2px 5px #e67e22/*shadow sa gilid2 sa box with color.*/
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #ebe6e6;
+
+}
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius: 15px;/*shadow sa gilid2 sa box with color.****/
+    border-top-right-radius: 15px;
+}
+
+.plan-box div:last-child { /*last child ang sa tumoy na element (sign up now)*/
+    text-align: center;
+    border-bottom: 0;/*tanggalon ang line sa ubos sa sign up*/
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span{  /*<span> inside a paragraph sa sulod sa span na element ma edit nimo ang size ug look, the rest sa paragraph sentences same ang look ug size as the parent.*/
+    font-size: 30%;
+    font-weight: 300%;
+        
+}
+
+.plan-price-meal {
+    font-size: 80%;
+    
+}
+.plan-box ul {
+    list-style: none; /*removing the style in list*/
+     
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+    
+}
+
+/*-----------------------------*/
+/*     FORM             */
+/*-----------------------------*/
+
+.contact-form { /*para ang content naa sa gitna sa web ug pantay2 ang space*/
+    width: 60%;
+    margin: 0 auto;
+} 
+
+input[type=email],
+input[type=text],/*ang type=email ug type=text area lang maapektuhan sa width ang news letter ug send it ang dli maapektuan.*/
+textarea,
+select {
+    width: 100%;
+    padding: 7px;
+    border-radius: 2px;
+   border: 1px solid #ccc;
+}
+textarea{
+    height: 100px;
+}
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;/*mrgin sa check Yesplease in between other elements*/
+}
+
+*:focus{outline:none};/*  *:focus=(remove google blue corner color in a box. */
+
+/*-----------------------------*/
+/*     FOOTER                */
+/*-----------------------------*/
+
+
+.nav {
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    
+    
+}
+
+.social-media {
+    list-style: none;
+    float: right;
+}
+.nav li,
+.social-media li{
+    
+    display: inline-block;
+    margin-right: 20px;
+     font-size: 13px;
+    
+}
+
+footer {
+    background-color: #333;
+    padding: 30px;
+}
+
+.nav li:last-child,
+.social-media li:last-child{
+    
+    
+    margin-right: 0;
+}
+
+.nav li a:link,
+.nav li a:visited,
+.social-media li a:link,
+.social-media li a:visited {
+    text-decoration: none;
+    border-bottom: 0;
+    color: #918989;
+}
+
+.nav li a:hover,
+.nav li a:active,
+.social-media a:link,
+.social-media a:visited {
+    text-decoration: none;
+    border-bottom: 0;
+    color: #ddd;
+    -webkit-transition: 0,2s;
+    transition: 0,2s;
+}
+
+footer p{
+    text-align: center;
+    color: #918989;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+.social-media li a:link,
+.social-media li a:visited {
+    font-size: 150%; 
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    
+    -webkit-transition: color 0,2s;
+    
+    transition: color 0,2s;
+}
+
+.ion-social-facebook:hover{
+    color: #3b5998;
+}
+.ion-social-twitter:hover{
+    color:  #55acee;
+}
+.ion-social-googleplus:hover{
+    color: #dd4b39;
+}
+.ion-social-instagram:hover{
+    color: #e95950;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+
+/*-----------------------------*/
+/*     JS ANIMATIONS               */
+/*-----------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{opacity: 0;
+-webkit-animation-duration: s;
+animation-duration: 1s;} /*to hide the innehåll av webb innan inimation effects*/
+.js--wp-4.animated{-webkit-animation-duration: 1s;animation-duration: 1s;}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated{opacity: 1;}/*to show the innehåll av webb with inimation effects*/
+

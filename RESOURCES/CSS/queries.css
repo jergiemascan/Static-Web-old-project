@@ -1,0 +1,113 @@
+
+/*big tablets to 1200px(widths smaller than 1140px row)*/
+@media only screen and (max-width:1200px){
+    
+    .hero-text-box {
+    width: 100%;
+    padding: 0 2%;/*top and bottom 0,left and right 2% */
+    } 
+    .row{ padding: 0 2%;}
+}
+
+/*smaller tablets to big tablets:from 768px to 1023px*/
+@media only screen and (max-width:1023px) {
+    
+    body {font-size: 18px;}
+    section {padding: 60px 0;}
+    .long-copy { width: 80%; margin-left: 10%; margin-right: 10%;}
+    
+    .step-box{margin-top: 10px;}
+    .step-box :last-child{margin-top: 10px;}
+    .app-screen { width: 50%; /* %tage because of responsive website we strive*/}
+    
+    .work-steps { margin-bottom: 40px;}    
+    .work-steps:last-of-type{ /*last rad of texts is adjusten to 70px*/
+    margin-bottom: 60px;}
+    /* app store/android*/
+    .btn-app img {height:35px; width: auto; margin-right: 40px;}
+    /*city*/
+    .city-feature { font-size: 90%;}
+    .icon-small{ width: 17px;padding-right: 3px;}
+    .box2{width: 20%;}
+   
+    .plan-box { width: 100%; margin-left: 0%;}
+    .plan-price{font-size: 200%; font-weight: 300;}
+    
+    .contact-form { width: 80%;} 
+  
+}
+/*smaller phones to small tablets. From 481px to 767px*/
+@media only screen and (max-width:767px){
+    
+    .main-nav{display: none;}/*hide nav*/
+    .mobile-nav-icon{  display: inline-block; float: right;margin-top: 25px;}
+    .main-nav {float: left;margin-top: 25px; margin-left: 25px;}
+    .main-nav li{display: block;padding-bottom: 10px;font-size: 90%;}
+    .main-nav li a:link,.main-nav li a:visited {display: block;border: 0;}/*and designs nila mosabay pod /or tanggalon underline*/
+    
+    /*STICKY NAVI*/
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding-bottom: 0;}
+    .sticky .main-nav li{padding-bottom: 5px;}
+    .sticky .main-nav {margin-top:0;}
+    .sticky .mobile-nav-icon i{color: #555; margin-top: 5px;}
+
+
+    
+    body{font-size: 16px;}
+    section{padding: 30px 0;}
+    .row, .hero-text-box { padding: 0 4%;}
+    .col{width: 100%; margin:  0 0 4% 0;}/*from grid*/
+  
+    
+    .long-copy { width: 100%; margin-left: 0%;}
+    h1{font-size: 160%;}
+    h2{font-size: 140%;}
+    
+    .work-steps{margin-bottom: 20px;}
+    .work-steps:last-of-type{ /*last rad of texts is adjusten to 70px*/
+    margin-bottom: 20px;} 
+    .work-steps div{height: 40px;width: 40px;margin-right: 15px;padding: 4px;font-size: 100%;}
+    .app-screen { width: 40%; }
+    .step-box:first-child {text-align: center;}
+  
+}
+/*old smller phones:from 0px to 480px */
+@media only screen and (max-width:480px){
+    
+    section{padding: 25px 0;}
+    .contact-form{width: 100%;}
+    
+   
+.nav li,
+.social-media li{font-size: 10px;}
+footer {padding: 4px;}
+     
+footer p{text-align: center;
+    padding-top: 2px;
+    padding-bottom: 0;
+    font-size: 8px;
+    
+}
+    
+    
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
